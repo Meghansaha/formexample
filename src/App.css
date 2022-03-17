@@ -10,12 +10,20 @@
 
 .form-label {
   font-size: 12pt;
+  grid-column: 2;
 }
 
 .form-label input {
   margin-left: 20px;
+  grid-column: 3;
 }
 
 .formsection {
   display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.section-title {
+  font-size: 15pt;
+  grid-column: 1 / 3;
 }

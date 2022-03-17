@@ -31,11 +31,11 @@ export default class BasicForm extends Component {
                 {RegistrationForm.questions.map((item,index) => {
                     return (
                         <div className='formsection' key={index}>
-                            <h1>{item.section}</h1>
+                            <div className='section-title'>{item.section}</div>
                             {item.inputs.map((row,index) => {
                                 return (
                                     <>
-                                    <label>{row.label}</label>
+                                    <div className='form-label'>{row.label}</div>
                                     <input className='form-input' type={row.inputType} id={row.name} />
                                     </>
                                 );
