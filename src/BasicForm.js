@@ -11,6 +11,8 @@ export default class BasicForm extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    userformdata = {};
+
     // if the user changes anything in the form, we need to update
     // the state to make sure the correct data is sent to backend
     handleChange(event) {
@@ -22,6 +24,7 @@ export default class BasicForm extends Component {
     handleSubmit(event) {
         alert('submit was clicked' + this.state.value)
         event.preventDefault();
+        // function needs to create the JSON with the user's response
         // this is where Javascript would send the JSON data to the backend database
     }
 
@@ -38,7 +41,7 @@ export default class BasicForm extends Component {
                                 return (
                                     <>
                                     <div className='form-label'>{row.label}</div>
-                                    <input className='form-input' type={row.inputType} id={row.name} onChange={this.handleChange}/>
+                                    <input className={row.cname} type={row.inputType} id={row.name} onChange={this.handleChange}/>
                                     </>
                                 );
                                 })
