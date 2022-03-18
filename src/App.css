@@ -22,9 +22,18 @@
   font-size: 12pt;
   grid-column: 2;
   width: 200px;
+  margin-bottom: 10px;
 }
 
 .form-input {
   grid-column: 3;
   width: 200px;
+  margin-bottom: 10px;
+}
+
+.form-submit {
+  align-items: center;
+  width: 100px;
+  margin-top: 15px;
+  grid-column: 2;
 }

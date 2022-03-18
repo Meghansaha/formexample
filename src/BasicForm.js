@@ -45,7 +45,9 @@ export default class BasicForm extends Component {
                     );
                     }
                 )}
-                <input type="submit" value="Submit" />
+                <div className='formsection'>
+                    <input className="form-submit" type="submit" value="Submit" />
+                </div>
             </form>
             </>
         )
