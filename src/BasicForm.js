@@ -15,6 +15,8 @@ export default class BasicForm extends Component {
     // the state to make sure the correct data is sent to backend
     handleChange(event) {
         this.setState({value: event.target.value})
+        // if you want to validate the input, handleChange can have the logic to do that
+        console.log(event.target.id , event.target.value);
     }
 
     handleSubmit(event) {
@@ -30,13 +32,13 @@ export default class BasicForm extends Component {
             <form onSubmit={this.handleSubmit} >
                 {RegistrationForm.questions.map((item,index) => {
                     return (
-                        <div className='formsection' key={index}>
+                        <div className='formsection' key={item.section}>
                             <div className='section-title'>{item.section}</div>
                             {item.inputs.map((row,index) => {
                                 return (
                                     <>
                                     <div className='form-label'>{row.label}</div>
-                                    <input className='form-input' type={row.inputType} id={row.name} />
+                                    <input className='form-input' type={row.inputType} id={row.name} onChange={this.handleChange}/>
                                     </>
                                 );
                                 })
