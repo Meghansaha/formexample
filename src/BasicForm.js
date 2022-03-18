@@ -40,8 +40,8 @@ export default class BasicForm extends Component {
                             {item.inputs.map((row,index) => {
                                 return (
                                     <>
-                                    <div className='form-label'>{row.label}</div>
-                                    <input className={row.cname} type={row.inputType} id={row.name} onChange={this.handleChange}/>
+                                    <div className={row.labelClass}>{row.label}</div>
+                                    <input className={row.inputClass} type={row.inputType} id={row.name} onChange={this.handleChange}/>
                                     </>
                                 );
                                 })

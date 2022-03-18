@@ -25,6 +25,14 @@
   margin-bottom: 10px;
 }
 
+.form-label-optional {
+  font-size: 12pt;
+  grid-column: 2;
+  width: 200px;
+  margin-bottom: 10px;
+  color: olive;
+}
+
 .form-input {
   grid-column: 3;
   width: 200px;
