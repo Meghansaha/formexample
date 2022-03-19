@@ -21,6 +21,7 @@
         {
             "section":"Technical Insight",
             "inputs": [
+                {"label":"Select me", "name":"selectme", "page":2, "inputType": "select", "optional":"false", "inputClass":"form-input", "labelClass":"form-label"},
                 {"label":"Coding Experience", "name":"codingXp", "page":2, "inputType": "text", "optional":"false", "inputClass":"form-input", "labelClass":"form-label"},
                 {"label":"Coding Explanation", "name":"codingExplanation", "page":2, "inputType": "text", "optional":"false", "inputClass":"form-input", "labelClass":"form-label"},
                 {"label":"Passion", "name":"passion", "page":2, "inputType": "text", "optional":"false", "inputClass":"form-input", "labelClass":"form-label"},

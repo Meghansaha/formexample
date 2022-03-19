@@ -38,12 +38,34 @@ export default class BasicForm extends Component {
                         <div className='formsection' key={item.section}>
                             <div className='section-title'>{item.section}</div>
                             {item.inputs.map((row,index) => {
+                               if (row.inputType == 'select') {
+                                   return (
+                                       <>
+                                    <div className={row.labelClass}>{row.label}</div>
+                                    <select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                       </>
+                               )
+                                } else if (row.inputType == 'checkbox') {
+                                       return (
+                                           <>
+                                           <div className={row.labelClass}>{row.label}</div>
+                                           <input className={row.inputClass} type={row.inputType} id={row.name} onChange={this.handleChange}/>
+                                           </>
+                                       )
+                               } else {
                                 return (
                                     <>
-                                    <div className={row.labelClass}>{row.label}</div>
-                                    <input className={row.inputClass} type={row.inputType} id={row.name} onChange={this.handleChange}/>
+                                        <>
+                                        <div className={row.labelClass}>{row.label}</div>
+                                        <input className={row.inputClass} type={row.inputType} id={row.name} onChange={this.handleChange}/>
+                                        </>
                                     </>
                                 );
+                               }
                                 })
                             }
                         </div>
