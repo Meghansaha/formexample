@@ -28,7 +28,7 @@ export const RegistrationForm = {
                 {"label":"Passion", "name":"passion", "page":2, "inputType": "text", "optional":"false", "inputClass":"form-input", "labelClass":"form-label"},
                 {"label":"Curiousity", "name":"curiousity", "page":2, "inputType": "text", "optional":"false", "inputClass":"form-input", "labelClass":"form-label"},
                 {"label":"App Create", "name":"appCreate", "page":2, "inputType": "text", "optional":"false", "inputClass":"form-input", "labelClass":"form-label"},
-                {"label":"App Idea", "name":"appIdea", "page":2, "inputType": "checkbox", "optional":"false", "inputClass":"form-input-checkbox", "labelClass":"form-label"}
+                {"label":"App Idea", "name":"appIdea", "page":2, "inputType": "checkbox", "optional":"false", "inputClass":"form-input-checkbox", "labelClass":"form-label", "checkValues":["one","two","three"]}
             ]
         }
     ]

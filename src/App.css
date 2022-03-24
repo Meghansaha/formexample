@@ -40,14 +40,10 @@
 }
 
 .form-input-checkbox {
+  display: flex;
   grid-column: 3;
-  width: 200px;
+  width: 50px;
   margin-bottom: 10px;
-  background-color: aqua;
-}
-
-.form-input-checkbox:checked {
-  background-color: cadetblue;
 }
 
 .form-submit {

@@ -13,6 +13,10 @@ export default class BasicForm extends Component {
 
     userformdata = {};
 
+    getFormData() {
+        // make the call to firebase
+    }
+
     // if the user changes anything in the form, we need to update
     // the state to make sure the correct data is sent to backend
     handleChange(event) {
@@ -53,7 +57,15 @@ export default class BasicForm extends Component {
                                        return (
                                            <>
                                            <div className={row.labelClass}>{row.label}</div>
-                                           <input className={row.inputClass} type={row.inputType} id={row.name} onChange={this.handleChange}/>
+                                           <div className={row.inputClass}>
+                                           {row.checkValues.map((checkval, idex) => {
+                                               return (
+                                                   <>
+                                                    {checkval} <input type={row.inputType} value={checkval} onChange={this.handleChange}/>
+                                                    </>
+                                               )
+                                           })}
+                                           </div>
                                            </>
                                        )
                                } else {
