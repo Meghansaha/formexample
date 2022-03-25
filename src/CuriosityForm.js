@@ -2,7 +2,7 @@ import './App.css'
 import React, { Component } from 'react'
 import { RegistrationForm } from './forms/registration';
 
-export default class BasicForm extends Component {
+export default class CuriosityForm extends Component {
     constructor(props) {
         super(props);
         this.state = {value: ''};
@@ -57,14 +57,18 @@ export default class BasicForm extends Component {
                                        return (
                                            <>
                                            <div className={row.labelClass}>{row.label}</div>
-                                           <div className={row.inputClass}>
+                                           <div className={row.inputClass}> agree
                                            {row.checkValues.map((checkval, idex) => {
                                                return (
-                                                   <>
-                                                    <input type={row.inputType} value={checkval} onChange={this.handleChange}/> {checkval}
+                                                    <>
+                                                    <div className='checkbox-column'>
+                                                        <div className='check-item'>{checkval}</div>
+                                                        <input className='check-item' type={row.inputType} value={checkval} onChange={this.handleChange}/>
+                                                    </div>
                                                     </>
                                                )
                                            })}
+                                           disagree
                                            </div>
                                            </>
                                        )
