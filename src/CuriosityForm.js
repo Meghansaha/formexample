@@ -57,7 +57,8 @@ export default class CuriosityForm extends Component {
                                        return (
                                            <>
                                            <div className={row.labelClass}>{row.label}</div>
-                                           <div className={row.inputClass}> agree
+                                           <div className={row.inputClass}>
+                                               <div className='check-item-label'>agree</div>
                                            {row.checkValues.map((checkval, idex) => {
                                                return (
                                                     <>
@@ -68,7 +69,7 @@ export default class CuriosityForm extends Component {
                                                     </>
                                                )
                                            })}
-                                           disagree
+                                           <div className='check-item-label'>disagree</div>
                                            </div>
                                            </>
                                        )

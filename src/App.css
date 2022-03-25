@@ -62,3 +62,9 @@
 .check-item {
   justify-self: center;
 }
+
+.check-item-label {
+  align-self: center;
+  grid-row: span 2;
+  padding: 10px;
+}
